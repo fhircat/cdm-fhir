@@ -1,0 +1,4726 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> . 
+@prefix dcterms: <http://purl.org/dc/terms/> . 
+@prefix mms: <http://rdf.cdisc.org/mms#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix cdm-fhir: <http://rdf.cd2h.org/cdm-fhir/element/>. 
+
+<http://rdf.cd2h.org/cdm-fhir/element>
+rdf:type owl:Ontology ;
+dc:creator "Guoqian Jiang from Mayo Clinic"^^xsd:string ;
+owl:versionInfo "1.0"^^xsd:string ; 
+skos:prefLabel "RDF Representation of CDM-FHIR Mappings"^^xsd:string ;
+.
+
+cdm-fhir:DEMOGRAPHICS.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.identifier; 
+. 
+cdm-fhir:DEMOGRAPHICS.birth_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.birth_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:DEMOGRAPHICS.birth_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.birth_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:DEMOGRAPHICS.sex 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.sex"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-birthsex; 
+. 
+cdm-fhir:DEMOGRAPHICS.sexual_orientation 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.sexual_orientation"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:DEMOGRAPHICS.gender_identity 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.gender_identity"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:DEMOGRAPHICS.hispanic 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.hispanic"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-ethnicity; 
+. 
+cdm-fhir:DEMOGRAPHICS.race 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.race"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-race; 
+. 
+cdm-fhir:DEMOGRAPHICS.biobank_flag 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.biobank_flag"^^xsd:string; 
+skos:closeMatch cdm-fhir:NotMappedforCDMH; 
+. 
+cdm-fhir:DEMOGRAPHICS.pat_pref_language_spoken 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEMOGRAPHICS.pat_pref_language_spoken"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.communication.language; 
+. 
+cdm-fhir:ENCOUNTER.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.id; 
+. 
+cdm-fhir:ENCOUNTER.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.subject; 
+. 
+cdm-fhir:ENCOUNTER.admit_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.admit_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:ENCOUNTER.admit_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.admit_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:ENCOUNTER.discharge_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.discharge_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:ENCOUNTER.discharge_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.discharge_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:ENCOUNTER.providerid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.providerid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.participant.individual.id; 
+. 
+cdm-fhir:ENCOUNTER.facility_location 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.facility_location"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.address; 
+. 
+cdm-fhir:ENCOUNTER.enc_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.enc_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.class; 
+. 
+cdm-fhir:ENCOUNTER.facilityid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.facilityid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.identifier; 
+. 
+cdm-fhir:ENCOUNTER.discharge_disposition 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.discharge_disposition"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.discharge-disposition.CodeableConcept; 
+. 
+cdm-fhir:ENCOUNTER.discharge_disposition 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.discharge_disposition"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:ENCOUNTER.discharge_status 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.discharge_status"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.type; 
+. 
+cdm-fhir:ENCOUNTER.drg 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.drg"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.drg.CodeableConcept; 
+. 
+cdm-fhir:ENCOUNTER.drg_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.drg_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.drg-type.CodeableConcept; 
+. 
+cdm-fhir:ENCOUNTER.admitting_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.admitting_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.hospitalization.admitSource; 
+. 
+cdm-fhir:ENCOUNTER.admitting_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.admitting_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.hospitalization.originlocation.type; 
+. 
+cdm-fhir:ENCOUNTER.payer_type_primary 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.payer_type_primary"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.payer-type-primary.Coding; 
+. 
+cdm-fhir:ENCOUNTER.payer_type_secondary 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.payer_type_secondary"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.payer-type-secondary.Coding; 
+. 
+cdm-fhir:ENCOUNTER.facility_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENCOUNTER.facility_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.type; 
+. 
+cdm-fhir:ENROLLMENT.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENROLLMENT.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:ResearchStudy.enrollment.member.entity.id; 
+. 
+cdm-fhir:ENROLLMENT.enr_start_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENROLLMENT.enr_start_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:ResearchStudy.enrollment.member.period; 
+. 
+cdm-fhir:ENROLLMENT.enr_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENROLLMENT.enr_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:ResearchStudy.enrollment.member.period; 
+. 
+cdm-fhir:ENROLLMENT.chart 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENROLLMENT.chart"^^xsd:string; 
+skos:closeMatch cdm-fhir:ResearchStudy.Extension.ProposedName.chart-availability-Boolean; 
+. 
+cdm-fhir:ENROLLMENT.enr_basis 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "ENROLLMENT.enr_basis"^^xsd:string; 
+skos:closeMatch cdm-fhir:ResearchStudy.enrollment.member.periodDifferntGroupfordifferenttimeperiodsforsamepatient; 
+. 
+cdm-fhir:DIAGNOSIS.diagnosisid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.diagnosisid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.id; 
+. 
+cdm-fhir:DIAGNOSIS.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.subject; 
+. 
+cdm-fhir:DIAGNOSIS.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter; 
+. 
+cdm-fhir:DIAGNOSIS.enc_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.enc_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.class; 
+. 
+cdm-fhir:DIAGNOSIS.admit_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.admit_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.period; 
+. 
+cdm-fhir:DIAGNOSIS.providerid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.providerid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.participant.individual.id; 
+. 
+cdm-fhir:DIAGNOSIS.dx 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.dx"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:DIAGNOSIS.dx_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.dx_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:DIAGNOSIS.dx_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.dx_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.diagnosis.use; 
+. 
+cdm-fhir:DIAGNOSIS.dx_origin 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.dx_origin"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.Extension.ProposedName.data-source-type.CodeableConcept; 
+. 
+cdm-fhir:DIAGNOSIS.pdx 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.pdx"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.diagnosis.rank; 
+. 
+cdm-fhir:DIAGNOSIS.dx_poa 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DIAGNOSIS.dx_poa"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.diagnosis.use; 
+. 
+cdm-fhir:PROCEDURES.proceduresid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.proceduresid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.id; 
+. 
+cdm-fhir:PROCEDURES.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.subject; 
+. 
+cdm-fhir:PROCEDURES.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.encounter; 
+. 
+cdm-fhir:PROCEDURES.enc_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.enc_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.encounter.class; 
+. 
+cdm-fhir:PROCEDURES.admit_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.admit_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.encounter.period; 
+. 
+cdm-fhir:PROCEDURES.providerid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.providerid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.encounter.participant.individual.id; 
+. 
+cdm-fhir:PROCEDURES.px_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.px_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedDateTime; 
+. 
+cdm-fhir:PROCEDURES.px 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.px"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.code; 
+. 
+cdm-fhir:PROCEDURES.px_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.px_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.code; 
+. 
+cdm-fhir:PROCEDURES.px_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.px_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.Extension.ProposedName.data-source-type.CodeableConcept; 
+. 
+cdm-fhir:PROCEDURES.ppx 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PROCEDURES.ppx"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.Extension.ProposedName.principal-flag.Boolean; 
+. 
+cdm-fhir:VITAL.vitalid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.vitalid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.id; 
+. 
+cdm-fhir:VITAL.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.subject; 
+. 
+cdm-fhir:VITAL.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.encounter; 
+. 
+cdm-fhir:VITAL.measure_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.measure_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.effectiveDateTime; 
+. 
+cdm-fhir:VITAL.measure_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.measure_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.effectiveDateTime; 
+. 
+cdm-fhir:VITAL.vital_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.vital_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.Extension.ProposedName.data-source-type.CodeableConcept; 
+. 
+cdm-fhir:VITAL.ht 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.ht"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:VITAL.wt 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.wt"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:VITAL.systolic 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.systolic"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:VITAL.original_bmi 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.original_bmi"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:VITAL.bp_position 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.bp_position"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.bodySite; 
+. 
+cdm-fhir:VITAL.smoking 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.smoking"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:VITAL.tobacco 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.tobacco"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:VITAL.tobacco_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "VITAL.tobacco_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:DISPENSING.dispensingid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispensingid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.id; 
+. 
+cdm-fhir:DISPENSING.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.subject; 
+. 
+cdm-fhir:DISPENSING.prescribingid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.prescribingid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.authorizingPrescription.requester; 
+. 
+cdm-fhir:DISPENSING.dispense_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispense_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.whenHandedOver; 
+. 
+cdm-fhir:DISPENSING.ndc 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.ndc"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.medicationCodeableConcept; 
+. 
+cdm-fhir:DISPENSING.dispense_sup 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispense_sup"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.daysSupply; 
+. 
+cdm-fhir:DISPENSING.dispense_amt 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispense_amt"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.quantity; 
+. 
+cdm-fhir:DISPENSING.dispense_dose_disp 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispense_dose_disp"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.dosageInstruction.dosex; 
+. 
+cdm-fhir:DISPENSING.dispense_dose_disp_unit 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispense_dose_disp_unit"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.dosageInstruction.doseAndRate; 
+. 
+cdm-fhir:DISPENSING.dispense_route 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DISPENSING.dispense_route"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationDispense.dosageInstruction.route; 
+. 
+cdm-fhir:LAB_RESULT_CM.lab_result_cm_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.lab_result_cm_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.id; 
+. 
+cdm-fhir:LAB_RESULT_CM.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.subject; 
+. 
+cdm-fhir:LAB_RESULT_CM.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.encountr; 
+. 
+cdm-fhir:LAB_RESULT_CM.lab_name 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.lab_name"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.performerorganization.name; 
+. 
+cdm-fhir:LAB_RESULT_CM.specimen_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.specimen_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.specimen.bodySite; 
+. 
+cdm-fhir:LAB_RESULT_CM.lab_loinc 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.lab_loinc"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LAB_RESULT_CM.priority 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.priority"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.Extension.ProposedName.priority.Coding; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_loc 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_loc"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.performerorganization.type; 
+. 
+cdm-fhir:LAB_RESULT_CM.lab_px 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.lab_px"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.partOfProcedure; 
+. 
+cdm-fhir:LAB_RESULT_CM.lab_px_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.lab_px_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.partOfProcedure; 
+. 
+cdm-fhir:LAB_RESULT_CM.lab_order_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.lab_order_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.basedOnServiceRequest.occurenceDateTime; 
+. 
+cdm-fhir:LAB_RESULT_CM.specimen_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.specimen_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.specimen.collection.collectedDateTime; 
+. 
+cdm-fhir:LAB_RESULT_CM.specimen_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.specimen_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.specimen.collection.collectedDateTime; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.issued; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.issued; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_qual 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_qual"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_num 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_num"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_modifier 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_modifier"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_unit 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_unit"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LAB_RESULT_CM.norm_range_low 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.norm_range_low"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.low; 
+. 
+cdm-fhir:LAB_RESULT_CM.norm_modifier_low 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.norm_modifier_low"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.modifierExtension; 
+. 
+cdm-fhir:LAB_RESULT_CM.norm_range_high 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.norm_range_high"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.high; 
+. 
+cdm-fhir:LAB_RESULT_CM.norm_modifier_high 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.norm_modifier_high"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.modifierExtension; 
+. 
+cdm-fhir:LAB_RESULT_CM.abn_ind 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.abn_ind"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.interpretation; 
+. 
+cdm-fhir:LAB_RESULT_CM.result_snomed 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.result_snomed"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuexCodeableConcept; 
+. 
+cdm-fhir:LAB_RESULT_CM.raw_lab_name 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.raw_lab_name"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LAB_RESULT_CM.raw_result 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "LAB_RESULT_CM.raw_result"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:CONDITION.conditionid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.conditionid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.id; 
+. 
+cdm-fhir:CONDITION.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.subject; 
+. 
+cdm-fhir:CONDITION.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter; 
+. 
+cdm-fhir:CONDITION.report_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.report_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.recordedDate; 
+. 
+cdm-fhir:CONDITION.resolve_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.resolve_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.abatementDateTime; 
+. 
+cdm-fhir:CONDITION.onset_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.onset_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.onsetDateTime; 
+. 
+cdm-fhir:CONDITION.condition_status 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.condition_status"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.clinicalStatus; 
+. 
+cdm-fhir:CONDITION.condition 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.condition"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:CONDITION.condition_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.condition_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:CONDITION.condition_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "CONDITION.condition_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.Extension.ProposedName.data-source-type.CodeableConcept; 
+. 
+cdm-fhir:PRO_CM.pro_cm_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_cm_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.id; 
+. 
+cdm-fhir:PRO_CM.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.subject; 
+. 
+cdm-fhir:PRO_CM.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.encounter; 
+. 
+cdm-fhir:PRO_CM.pro_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire; 
+. 
+cdm-fhir:PRO_CM.pro_item_name 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_item_name"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.item; 
+. 
+cdm-fhir:PRO_CM.pro_item_loinc 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_item_loinc"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.item.code; 
+. 
+cdm-fhir:PRO_CM.pro_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.authored; 
+. 
+cdm-fhir:PRO_CM.pro_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.authored; 
+. 
+cdm-fhir:PRO_CM.pro_response 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_response"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:PRO_CM.pro_response_text 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_response_text"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.item.answer; 
+. 
+cdm-fhir:PRO_CM.pro_response_num 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_response_num"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.item.answer; 
+. 
+cdm-fhir:PRO_CM.pro_method 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_method"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.Extension.ProposedName.administration-method.CodeableConcept; 
+. 
+cdm-fhir:PRO_CM.pro_mode 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_mode"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.source; 
+. 
+cdm-fhir:PRO_CM.pro_cat 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_cat"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.Extension.ProposedName.administration-method.CodeableConcept; 
+. 
+cdm-fhir:PRO_CM.pro_item_version 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_item_version"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.quesionnaire.item; 
+. 
+cdm-fhir:PRO_CM.pro_measure_name 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_name"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.name; 
+. 
+cdm-fhir:PRO_CM.pro_measure_seq 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_seq"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.item.linkId; 
+. 
+cdm-fhir:PRO_CM.pro_measure_score 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_score"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.itemScoreisalsorepresentedasanitem; 
+. 
+cdm-fhir:PRO_CM.pro_measure_theta 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_theta"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.itemScoreisalsorepresentedasanitem; 
+. 
+cdm-fhir:PRO_CM.pro_measure_scaled_tscore 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_scaled_tscore"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.itemScoreisalsorepresentedasanitem; 
+. 
+cdm-fhir:PRO_CM.pro_measure_standard_error 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_standard_error"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.itemStandardErrorisalsorepresentedasanitem; 
+. 
+cdm-fhir:PRO_CM.pro_measure_count_error 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_count_error"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.itemCountErrorisalsorepresentedasanitem; 
+. 
+cdm-fhir:PRO_CM.pro_measure_loinc 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_loinc"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.code; 
+. 
+cdm-fhir:PRO_CM.pro_measure_version 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_version"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.version; 
+. 
+cdm-fhir:PRO_CM.pro_item_fullname 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_item_fullname"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.name; 
+. 
+cdm-fhir:PRO_CM.pro_item_text 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_item_text"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.item.text; 
+. 
+cdm-fhir:PRO_CM.pro_measure_fullname 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRO_CM.pro_measure_fullname"^^xsd:string; 
+skos:closeMatch cdm-fhir:QuestionnaireResponse.questionnaire.name; 
+. 
+cdm-fhir:PRESCRIBING.prescribingid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.prescribingid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequestion.id; 
+. 
+cdm-fhir:PRESCRIBING.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.subject; 
+. 
+cdm-fhir:PRESCRIBING.encounterid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.encounterid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.encounter; 
+. 
+cdm-fhir:PRESCRIBING.rx_providerid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_providerid"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.requester; 
+. 
+cdm-fhir:PRESCRIBING.rx_order_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_order_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.authoredOn; 
+. 
+cdm-fhir:PRESCRIBING.rx_order_time 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_order_time"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.authoredOn; 
+. 
+cdm-fhir:PRESCRIBING.rx_start_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_start_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dispenseRequest.validityPeriod; 
+. 
+cdm-fhir:PRESCRIBING.rx_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dispenseRequest.validityPeriod; 
+. 
+cdm-fhir:PRESCRIBING.rx_quantity 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_quantity"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dispenseRequest.quantity; 
+. 
+cdm-fhir:PRESCRIBING.rx_dose_form 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_dose_form"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dosageInstruction.doseAndRate.dosex; 
+. 
+cdm-fhir:PRESCRIBING.rx_refills 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_refills"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed; 
+. 
+cdm-fhir:PRESCRIBING.rx_days_supply 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_days_supply"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dispenseRequest.expectedSupplyDuration; 
+. 
+cdm-fhir:PRESCRIBING.rx_frequency 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_frequency"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dosageInstruction.timing; 
+. 
+cdm-fhir:PRESCRIBING.rx_basis 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_basis"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.intent; 
+. 
+cdm-fhir:PRESCRIBING.rxnorm_cui 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rxnorm_cui"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.medicationCodeableConcept; 
+. 
+cdm-fhir:PRESCRIBING.rx_dose_ordered 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_dose_ordered"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dosageInstruction.doseAndRate.dosex; 
+. 
+cdm-fhir:PRESCRIBING.rx_dose_ordered_unit 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_dose_ordered_unit"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dosageInstruction.doseAndRate.dosex; 
+. 
+cdm-fhir:PRESCRIBING.rx_route 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "PRESCRIBING.rx_route"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationRequest.dosageInstruction.route; 
+. 
+cdm-fhir:DEATH.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.subject; 
+. 
+cdm-fhir:DEATH.death_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.date; 
+. 
+cdm-fhir:DEATH.death_date_impute 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_date_impute"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.recordedDate; 
+. 
+cdm-fhir:DEATH.death_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.contributor; 
+. 
+cdm-fhir:DEATH.death_match_confidence 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_match_confidence"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.Extension.ProposedName.uncertainity-code.CodeableConcept; 
+. 
+cdm-fhir:DEATH.patid 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.patid"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.subject; 
+. 
+cdm-fhir:DEATH.death_cause 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_cause"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept; 
+. 
+cdm-fhir:DEATH.death_cause_code 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_cause_code"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept; 
+. 
+cdm-fhir:DEATH.death_cause_type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_cause_type"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.suspectedEntity.causality.method; 
+. 
+cdm-fhir:DEATH.death_cause_source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_cause_source"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.contributor; 
+. 
+cdm-fhir:DEATH.death_cause_confidence 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:PCORnet; 
+rdfs:label "DEATH.death_cause_confidence"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.Extension.ProposedName.uncertainity-code.CodeableConcept; 
+. 
+cdm-fhir:PERSON.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.identifier; 
+. 
+cdm-fhir:PERSON.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.generalPractitioner; 
+. 
+cdm-fhir:PERSON.care_site_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.care_site_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:BodySite.patient; 
+. 
+cdm-fhir:PERSON.gender_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.gender_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.gender; 
+. 
+cdm-fhir:PERSON.year_of_birth 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.year_of_birth"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:PERSON.month_of_birth 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.month_of_birth"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:PERSON.day_of_birth 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.day_of_birth"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:PERSON.birth_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.birth_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:PERSON.race_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.race_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-race; 
+. 
+cdm-fhir:PERSON.ethnicity_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.ethnicity_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-ethnicity; 
+. 
+cdm-fhir:PERSON.location_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PERSON.location_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.address; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_occurence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_occurence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.id; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.care_site_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.care_site_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.identifier; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.admitting_source_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.admitting_source_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.hospitalization.admitSourceorEncounter.hospitalization.originlocation.type; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.discharge_to_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.discharge_to_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.type; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.preceding_visit_occurence 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.preceding_visit_occurence"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.partOf; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.subject; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.type; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_start_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_start_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_start_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_start_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_end_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_end_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:VISIT_OCCURRENCE.visit_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "VISIT_OCCURRENCE.visit_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.source-data-type.CodeableConcept; 
+. 
+cdm-fhir:CARE_SITE.care_site_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CARE_SITE.care_site_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.id; 
+. 
+cdm-fhir:CARE_SITE.care_site_name 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CARE_SITE.care_site_name"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.name; 
+. 
+cdm-fhir:CARE_SITE.place_of_service_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CARE_SITE.place_of_service_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.type; 
+. 
+cdm-fhir:CARE_SITE.location_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CARE_SITE.location_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.id; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.asserter; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.visit_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.visit_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_status_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_status_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.clinicalStatus; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.subject; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_start_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_start_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.onsetx; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_start_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_start_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condtion.onsetx; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.abatementx; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_end_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_end_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.abatementx; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.condition_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.condition_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.Extension.ProposedName.raw-value.CodeableConcept; 
+. 
+cdm-fhir:CONDITION_OCCURRENCE.stop_reason 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "CONDITION_OCCURRENCE.stop_reason"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.Extension.ProposedName.abatement-reason.CodeableConcept; 
+. 
+cdm-fhir:DEATH.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEATH.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.subject; 
+. 
+cdm-fhir:DEATH.death_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEATH.death_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.date; 
+. 
+cdm-fhir:DEATH.death_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEATH.death_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.recordedDate; 
+. 
+cdm-fhir:DEATH.death_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEATH.death_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept; 
+. 
+cdm-fhir:DEATH.cause_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEATH.cause_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_exposure_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_exposure_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.id; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.quantity 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.quantity"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.focalDevice-Procedure.usedReference-Procedure.usedCode; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performer.actor; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.visit_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.visit_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.encounter; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.subject; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.focalDevice-Procedure.usedReference-Procedure.usedCode; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_exposure_start_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_exposure_start_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedPeriod; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_exposure_start_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_exposure_start_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedPeriod; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_exposure_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_exposure_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedPeriod; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_exposure_end_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_exposure_end_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedPeriod; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.device_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.device_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.Extension.ProposedName.raw-value.CodeableConcept; 
+. 
+cdm-fhir:DEVICE_EXPOSURE.unique_device_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DEVICE_EXPOSURE.unique_device_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.focalDevice-Procedure.usedReference; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_exposure_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_exposure_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.id; 
+. 
+cdm-fhir:DRUG_EXPOSURE.stop_reason 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.stop_reason"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.statusReason; 
+. 
+cdm-fhir:DRUG_EXPOSURE.refills 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.refills"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dispenseRequest.numberOfRepeatsAllowed; 
+. 
+cdm-fhir:DRUG_EXPOSURE.quantity 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.quantity"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dispenseRequest.quantity; 
+. 
+cdm-fhir:DRUG_EXPOSURE.days_supply 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.days_supply"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dispenseRequest.expectedSupplyDuration; 
+. 
+cdm-fhir:DRUG_EXPOSURE.lot_number 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.lot_number"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medication.batch.lotNumber; 
+. 
+cdm-fhir:DRUG_EXPOSURE.sig 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.sig"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.text; 
+. 
+cdm-fhir:DRUG_EXPOSURE.route_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.route_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.route; 
+. 
+cdm-fhir:DRUG_EXPOSURE.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.requester; 
+. 
+cdm-fhir:DRUG_EXPOSURE.visit_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.visit_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.context; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_source_value 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_source_value"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.Extension.ProposedName.raw-value.CodeableConcept; 
+. 
+cdm-fhir:DRUG_EXPOSURE.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.subject; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_exposure_start_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_exposure_start_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.effectivePeriod; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_exposure_start_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_exposure_start_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.effectivePeriod; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_exposure_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_exposure_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.effectivePeriod; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_exposure_end_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_exposure_end_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.effectivePeriod; 
+. 
+cdm-fhir:DRUG_EXPOSURE.verbatim_end_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.verbatim_end_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.validityPeriod; 
+. 
+cdm-fhir:DRUG_EXPOSURE.drug_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "DRUG_EXPOSURE.drug_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:LOCATION.location_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.location_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.id; 
+. 
+cdm-fhir:LOCATION.address_1 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.address_1"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address.line; 
+. 
+cdm-fhir:LOCATION.address_2 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.address_2"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address.line; 
+. 
+cdm-fhir:LOCATION.city 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.city"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address.city; 
+. 
+cdm-fhir:LOCATION.state 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.state"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address.state; 
+. 
+cdm-fhir:LOCATION.zip 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.zip"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address.postalCode; 
+. 
+cdm-fhir:LOCATION.country 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "LOCATION.country"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.address.country; 
+. 
+cdm-fhir:MEASUREMENT.measurement_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.measurement_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.id; 
+. 
+cdm-fhir:MEASUREMENT.unit_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.unit_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:MEASUREMENT.range_low 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.range_low"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.low; 
+. 
+cdm-fhir:MEASUREMENT.range_high 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.range_high"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.high; 
+. 
+cdm-fhir:MEASUREMENT.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.performerPractitioner; 
+. 
+cdm-fhir:MEASUREMENT.visit_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.visit_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.encounter; 
+. 
+cdm-fhir:MEASUREMENT.measurement_source_value 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.measurement_source_value"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.Extension.ProposedName.raw-value.CodeableConcept; 
+. 
+cdm-fhir:MEASUREMENT.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.subject; 
+. 
+cdm-fhir:MEASUREMENT.measurement_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.measurement_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:MEASUREMENT.measurement_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.measurement_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.effectiveDateTime; 
+. 
+cdm-fhir:MEASUREMENT.measurement_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.measurement_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.effectiveDateTime; 
+. 
+cdm-fhir:MEASUREMENT.measurement_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.measurement_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.meta.source; 
+. 
+cdm-fhir:MEASUREMENT.operator_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.operator_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Notsurewhythisisrequired; 
+. 
+cdm-fhir:MEASUREMENT.value_as_number 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.value_as_number"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:MEASUREMENT.value_as_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "MEASUREMENT.value_as_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valueCodeableConcept; 
+. 
+cdm-fhir:OBSERVATION.observation_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.observation_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.id; 
+. 
+cdm-fhir:OBSERVATION.qualifier_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.qualifier_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.Extension.ProposedName.decision-aid-alert.CodeableConcept; 
+. 
+cdm-fhir:OBSERVATION.unit_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.unit_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:OBSERVATION.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.performerPractitioner; 
+. 
+cdm-fhir:OBSERVATION.visit_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.visit_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.encounter; 
+. 
+cdm-fhir:OBSERVATION.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.subject; 
+. 
+cdm-fhir:OBSERVATION.observation_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.observation_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:OBSERVATION.observation_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.observation_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.effectiveDateTime; 
+. 
+cdm-fhir:OBSERVATION.observation_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.observation_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.effectiveDateTime; 
+. 
+cdm-fhir:OBSERVATION.observation_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.observation_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.category; 
+. 
+cdm-fhir:OBSERVATION.value_as_number 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.value_as_number"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:OBSERVATION.value_as_string 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.value_as_string"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valueString; 
+. 
+cdm-fhir:OBSERVATION.value_as_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "OBSERVATION.value_as_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valueCodeableConcept; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.procedure_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.procedure_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.id; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.visit_occurrence_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.visit_occurrence_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.encounter; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.subject; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.procedure_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.procedure_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.code; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.procedure_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.procedure_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedDateTime; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.procedure_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.procedure_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedDateTime; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.procedure_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.procedure_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.Extension.ProposedName.source-data-type.CodeableConcept; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.quantity 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.quantity"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.Extension.ProposedName.num-of-procedures.CodeableConcept; 
+. 
+cdm-fhir:PROCEDURE_OCCURRENCE.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROCEDURE_OCCURRENCE.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performer.actor; 
+. 
+cdm-fhir:PROVIDER.provider_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.provider_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Practitioner.id; 
+. 
+cdm-fhir:PROVIDER.provider_name 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.provider_name"^^xsd:string; 
+skos:closeMatch cdm-fhir:Practitioner.name; 
+. 
+cdm-fhir:PROVIDER.npi 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.npi"^^xsd:string; 
+skos:closeMatch cdm-fhir:Practitioner.identifier; 
+. 
+cdm-fhir:PROVIDER.dea 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.dea"^^xsd:string; 
+skos:closeMatch cdm-fhir:Practitioner.qualification; 
+. 
+cdm-fhir:PROVIDER.specialty_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.specialty_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:PractitionerRole.specialty; 
+. 
+cdm-fhir:PROVIDER.care_site_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.care_site_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:PractitionerRole.location; 
+. 
+cdm-fhir:PROVIDER.year_of_birth 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.year_of_birth"^^xsd:string; 
+skos:closeMatch cdm-fhir:Practitioner.birthDate; 
+. 
+cdm-fhir:PROVIDER.gender_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "PROVIDER.gender_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Practitioner.gender; 
+. 
+cdm-fhir:SPECIMEN.specimen_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.specimen_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.id; 
+. 
+cdm-fhir:SPECIMEN.disease_status_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.disease_status_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.Extension.ProposedName.disease-status-code.CodeableConcept; 
+. 
+cdm-fhir:SPECIMEN.person_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.person_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.subject; 
+. 
+cdm-fhir:SPECIMEN.specimen_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.specimen_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.type; 
+. 
+cdm-fhir:SPECIMEN.specimen_type_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.specimen_type_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.Extension.ProposedName.source-data-type.CodeableConcept; 
+. 
+cdm-fhir:SPECIMEN.specimen_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.specimen_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.collection.collectedDateTime; 
+. 
+cdm-fhir:SPECIMEN.specimen_datetime 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.specimen_datetime"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.collection.collectedDateTime; 
+. 
+cdm-fhir:SPECIMEN.quantity 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.quantity"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.collection.quantity; 
+. 
+cdm-fhir:SPECIMEN.unit_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.unit_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.collection.quantity; 
+. 
+cdm-fhir:SPECIMEN.anatomic_site_concept_id 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:OMOP; 
+rdfs:label "SPECIMEN.anatomic_site_concept_id"^^xsd:string; 
+skos:closeMatch cdm-fhir:Specimen.bodySite; 
+. 
+cdm-fhir:DEMOGRAPHIC.PatID 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.PatID"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.identifier; 
+. 
+cdm-fhir:DEMOGRAPHIC.Birth-Date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.Birth-Date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:DEMOGRAPHIC.Sex 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.Sex"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-birthsex; 
+. 
+cdm-fhir:DEMOGRAPHIC.Hispanic 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.Hispanic"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-ethnicity; 
+. 
+cdm-fhir:DEMOGRAPHIC.Race 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.Race"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-race; 
+. 
+cdm-fhir:DEMOGRAPHIC.Zip 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.Zip"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.address; 
+. 
+cdm-fhir:DEMOGRAPHIC.Zip_Date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "DEMOGRAPHIC.Zip_Date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.address.period; 
+. 
+cdm-fhir:ENCOUNTER.EncounterID 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.EncounterID"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.id; 
+. 
+cdm-fhir:ENCOUNTER.PatID 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.PatID"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.subject; 
+. 
+cdm-fhir:ENCOUNTER.ADATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.ADATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:ENCOUNTER.DDATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.DDATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:ENCOUNTER.Provider 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Provider"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.participant.individual.id; 
+. 
+cdm-fhir:ENCOUNTER.Facility_Location 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Facility_Location"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.address; 
+. 
+cdm-fhir:ENCOUNTER.EncType 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.EncType"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.class; 
+. 
+cdm-fhir:ENCOUNTER.Facility_Code 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Facility_Code"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.identifier; 
+. 
+cdm-fhir:ENCOUNTER.Discharge_Disposition 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Discharge_Disposition"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.discharge-disposition.CodeableConcept; 
+. 
+cdm-fhir:ENCOUNTER.Discharge_Disposition 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Discharge_Disposition"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code-Observation.valuex; 
+. 
+cdm-fhir:ENCOUNTER.Discharge_Status 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Discharge_Status"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.type; 
+. 
+cdm-fhir:ENCOUNTER.DRG 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.DRG"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.drg.CodeableConcept; 
+. 
+cdm-fhir:ENCOUNTER.DRG_Type 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.DRG_Type"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.extension.ProposedName.drg-type.CodeableConcept; 
+. 
+cdm-fhir:ENCOUNTER.Admitting_Source 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:Sentinel; 
+rdfs:label "ENCOUNTER.Admitting_Source"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.hospitalization.admitSourceorEncounter.hospitalization.originlocation.type; 
+. 
+cdm-fhir:DEMOGRAPHICS.birth_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DEMOGRAPHICS.birth_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.birthDate; 
+. 
+cdm-fhir:DEMOGRAPHICS.Death_date 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DEMOGRAPHICS.Death_date"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.deceasedDateTime; 
+. 
+cdm-fhir:DEMOGRAPHICS.sex 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DEMOGRAPHICS.sex"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-birthsex; 
+. 
+cdm-fhir:DEMOGRAPHICS.Hispanic 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DEMOGRAPHICS.Hispanic"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-ethnicity; 
+. 
+cdm-fhir:DEMOGRAPHICS.Race 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DEMOGRAPHICS.Race"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.extension.us-core-race; 
+. 
+cdm-fhir:DEMOGRAPHICS.Vital_status 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DEMOGRAPHICS.Vital_status"^^xsd:string; 
+skos:closeMatch cdm-fhir:Patient.deceasedBoolean; 
+. 
+cdm-fhir:DIAGNOSIS.DIAGNOSIS_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DIAGNOSIS.DIAGNOSIS_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:DIAGNOSIS.DIAGNOSIS_CODING_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DIAGNOSIS.DIAGNOSIS_CODING_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:DIAGNOSIS.DIAGNOSIS_CODING_SYSTEM_VERSION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DIAGNOSIS.DIAGNOSIS_CODING_SYSTEM_VERSION"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.code; 
+. 
+cdm-fhir:DIAGNOSIS.DIAGNOSIS_DATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DIAGNOSIS.DIAGNOSIS_DATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.onsetDateTime; 
+. 
+cdm-fhir:DIAGNOSIS.DIAGNOSIS_PRIORITY 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DIAGNOSIS.DIAGNOSIS_PRIORITY"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.encounter.diagnosis.rank; 
+. 
+cdm-fhir:DIAGNOSIS.DIAGNOSIS_SOURCE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "DIAGNOSIS.DIAGNOSIS_SOURCE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Condition.category; 
+. 
+cdm-fhir:LABORATORYTEST.ABNORMAL_RESULT_INDICATOR 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.ABNORMAL_RESULT_INDICATOR"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.interpretation; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_MODIFIER_LOW 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_MODIFIER_LOW"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.modifierExtension; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_NORMAL_RANGE_HIGH 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_NORMAL_RANGE_HIGH"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.high; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_NORMAL_RANGE_LOW 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_NORMAL_RANGE_LOW"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.low; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_ORDER_DEPT 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_ORDER_DEPT"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location.id; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_PANEL 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_PANEL"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_RESULT 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_RESULT"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_UNIT 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_UNIT"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LABORATORYTEST.RESULT_LOCATION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RESULT_LOCATION"^^xsd:string; 
+skos:closeMatch cdm-fhir:Location; 
+. 
+cdm-fhir:LABORATORYTEST.RESULT_MODIFIER 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RESULT_MODIFIER"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LABORATORYTEST.RESULT_NUMERICAL 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RESULT_NUMERICAL"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LABORATORYTEST.LAB_CLASSIFICATION_SYSTEM_VERSION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.LAB_CLASSIFICATION_SYSTEM_VERSION"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.RESULT_QUALITATIVE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RESULT_QUALITATIVE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valueCodeableConcept; 
+. 
+cdm-fhir:LABORATORYTEST.RESULT_UNIT 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RESULT_UNIT"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.valuex; 
+. 
+cdm-fhir:LABORATORYTEST.SPECIMEN_DATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.SPECIMEN_DATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.specimen.collection.collectedDateTime; 
+. 
+cdm-fhir:LABORATORYTEST.LAB_CLASSIFICATION_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.LAB_CLASSIFICATION_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.LAB_CODING_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.LAB_CODING_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.LAB_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.LAB_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.LAB_CODING_SYSTEM_VERSION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.LAB_CODING_SYSTEM_VERSION"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_FACILITY_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_FACILITY_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.location.location.identifier; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_LAB_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_LAB_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.code; 
+. 
+cdm-fhir:LABORATORYTEST.RAW_MODIFIER_HIGH 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "LABORATORYTEST.RAW_MODIFIER_HIGH"^^xsd:string; 
+skos:closeMatch cdm-fhir:Observation.referenceRange.modifierExtension; 
+. 
+cdm-fhir:MEDICATION.MEDICATION_CLASSIFICATION_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.MEDICATION_CLASSIFICATION_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.RAW_MEDICATION_NAME 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.RAW_MEDICATION_NAME"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.Extension.ProposedName.raw-value.CodeableConcept; 
+. 
+cdm-fhir:MEDICATION.RAW_MEDICATION_STRENGTH 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.RAW_MEDICATION_STRENGTH"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.dosex; 
+. 
+cdm-fhir:MEDICATION.RAW_MEDICATION_ROUTE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.RAW_MEDICATION_ROUTE"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.route; 
+. 
+cdm-fhir:MEDICATION.MEDICATION_CODING_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.MEDICATION_CODING_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.MEDICATION_CLASSIFICATION_SYSTEM_VERSION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.MEDICATION_CLASSIFICATION_SYSTEM_VERSION"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.MEDICATION_CLASSIFICATION_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.MEDICATION_CLASSIFICATION_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.MEDICATION_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.MEDICATION_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.MEDICATION_CODING_SYSTEM_VERSION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.MEDICATION_CODING_SYSTEM_VERSION"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.ORDER_DATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.ORDER_DATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.authoredOn; 
+. 
+cdm-fhir:MEDICATION.ORDER_TYPE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.ORDER_TYPE"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.requester; 
+. 
+cdm-fhir:MEDICATION.RAW_MEDICATION_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.RAW_MEDICATION_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.medicationCodeableConcept; 
+. 
+cdm-fhir:MEDICATION.RAW_MEDICATION_FORM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "MEDICATION.RAW_MEDICATION_FORM"^^xsd:string; 
+skos:closeMatch cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.doseAndRate.dosex; 
+. 
+cdm-fhir:PROCEDURE.PROCEDURE_CODING_SYSTEM 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "PROCEDURE.PROCEDURE_CODING_SYSTEM"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.code; 
+. 
+cdm-fhir:PROCEDURE.PROCEDURE_CODE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "PROCEDURE.PROCEDURE_CODE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.code; 
+. 
+cdm-fhir:PROCEDURE.PROCEDURE_CODING_SYSTEM_VERSION 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "PROCEDURE.PROCEDURE_CODING_SYSTEM_VERSION"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.code; 
+. 
+cdm-fhir:PROCEDURE.PROCEDURE_DATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "PROCEDURE.PROCEDURE_DATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Procedure.performedDateTime; 
+. 
+cdm-fhir:VISIT.ADMIT_DATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "VISIT.ADMIT_DATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:VISIT.DISCHARGE_DATE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "VISIT.DISCHARGE_DATE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.period; 
+. 
+cdm-fhir:VISIT.VISIT_TYPE 
+rdf:type mms:DataElement;  
+mms:context cdm-fhir:i2b2; 
+rdfs:label "VISIT.VISIT_TYPE"^^xsd:string; 
+skos:closeMatch cdm-fhir:Encounter.class; 
+. 
+cdm-fhir:Patient.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-birthsex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-birthsex"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Patient.extension.us-core-ethnicity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-ethnicity"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-race 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-race"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:NotMappedforCDMH 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "NotMappedforCDMH"^^xsd:string; 
+mms:context cdm-fhir:NotMappedforCDMH; 
+. 
+cdm-fhir:Patient.communication.language 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.communication.language"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Encounter.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.participant.individual.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.participant.individual.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Encounter.location.location.address 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.address"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.class 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.class"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.location.location.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.discharge-disposition.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.discharge-disposition.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounterorus-core-observationresults; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounterorus-core-observationresults; 
+. 
+cdm-fhir:Encounter.location.location.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.drg.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.drg.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.drg-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.drg-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.hospitalization.admitSource 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.hospitalization.admitSource"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.hospitalization.originlocation.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.hospitalization.originlocation.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.payer-type-primary.Coding 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.payer-type-primary.Coding"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.payer-type-secondary.Coding 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.payer-type-secondary.Coding"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.location.location.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:ResearchStudy.enrollment.member.entity.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "ResearchStudy.enrollment.member.entity.id"^^xsd:string; 
+mms:context cdm-fhir:ResearchStudy; 
+. 
+cdm-fhir:ResearchStudy.enrollment.member.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "ResearchStudy.enrollment.member.period"^^xsd:string; 
+mms:context cdm-fhir:ResearchStudy; 
+. 
+cdm-fhir:ResearchStudy.enrollment.member.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "ResearchStudy.enrollment.member.period"^^xsd:string; 
+mms:context cdm-fhir:ResearchStudy; 
+. 
+cdm-fhir:ResearchStudy.Extension.ProposedName.chart-availability-Boolean 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "ResearchStudy.Extension.ProposedName.chart-availability-Boolean"^^xsd:string; 
+mms:context cdm-fhir:ResearchStudy; 
+. 
+cdm-fhir:ResearchStudy.enrollment.member.periodDifferntGroupfordifferenttimeperiodsforsamepatient 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "ResearchStudy.enrollment.member.periodDifferntGroupfordifferenttimeperiodsforsamepatient"^^xsd:string; 
+mms:context cdm-fhir:ResearchStudy; 
+. 
+cdm-fhir:Condition.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter.class 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.class"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Condition.encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Condition.encounter.participant.individual.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.participant.individual.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter.diagnosis.use 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.diagnosis.use"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Condition.Extension.ProposedName.data-source-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.Extension.ProposedName.data-source-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter.diagnosis.rank 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.diagnosis.rank"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Condition.encounter.diagnosis.use 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.diagnosis.use"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Procedure.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.encounter.class 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.encounter.class"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Procedure.encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Procedure.encounter.participant.individual.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.encounter.participant.individual.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Procedure.performedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.Extension.ProposedName.data-source-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.Extension.ProposedName.data-source-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.Extension.ProposedName.principal-flag.Boolean 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.Extension.ProposedName.principal-flag.Boolean"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Observation.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.id"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.subject"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.encounter"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.effectiveDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.effectiveDateTime"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.effectiveDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.effectiveDateTime"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.Extension.ProposedName.data-source-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.Extension.ProposedName.data-source-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.bodySite 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.bodySite"^^xsd:string; 
+mms:context cdm-fhir:observation-vitalsigns; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-smokingstatus; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:MedicationDispense.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.id"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.subject"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.authorizingPrescription.requester 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.authorizingPrescription.requester"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:MedicationDispense.whenHandedOver 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.whenHandedOver"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.daysSupply 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.daysSupply"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.quantity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.quantity"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.dosageInstruction.dosex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.dosageInstruction.dosex"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.dosageInstruction.doseAndRate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.dosageInstruction.doseAndRate"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:MedicationDispense.dosageInstruction.route 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationDispense.dosageInstruction.route"^^xsd:string; 
+mms:context cdm-fhir:MedicationDispense; 
+. 
+cdm-fhir:Observation.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.encountr 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.encountr"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.performerorganization.name 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.performerorganization.name"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:us-core-organization; 
+. 
+cdm-fhir:Observation.specimen.bodySite 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.specimen.bodySite"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.Extension.ProposedName.priority.Coding 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.Extension.ProposedName.priority.Coding"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.performerorganization.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.performerorganization.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:us-core-organization; 
+. 
+cdm-fhir:Observation.partOfProcedure 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.partOfProcedure"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Observation.partOfProcedure 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.partOfProcedure"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Observation.basedOnServiceRequest.occurenceDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.basedOnServiceRequest.occurenceDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:ServiceRequest; 
+. 
+cdm-fhir:Observation.specimen.collection.collectedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.specimen.collection.collectedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Observation.specimen.collection.collectedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.specimen.collection.collectedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Observation.issued 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.issued"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.issued 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.issued"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.low 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.low"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.modifierExtension 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.modifierExtension"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.high 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.high"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.modifierExtension 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.modifierExtension"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.interpretation 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.interpretation"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuexCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuexCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Condition.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.recordedDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.recordedDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.abatementDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.abatementDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.onsetDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.onsetDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.clinicalStatus 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.clinicalStatus"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.Extension.ProposedName.data-source-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.Extension.ProposedName.data-source-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:QuestionnaireResponse.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.id"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.subject"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.encounter"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.item 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.item"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.item.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.item.code"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.authored 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.authored"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.authored 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.authored"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.item.answer 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.item.answer"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.item.answer 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.item.answer"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.Extension.ProposedName.administration-method.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.Extension.ProposedName.administration-method.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.source 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.source"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.Extension.ProposedName.administration-method.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.Extension.ProposedName.administration-method.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.quesionnaire.item 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.quesionnaire.item"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.name 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.name"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.item.linkId 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.item.linkId"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.itemScoreisalsorepresentedasanitem 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.itemScoreisalsorepresentedasanitem"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.itemScoreisalsorepresentedasanitem 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.itemScoreisalsorepresentedasanitem"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.itemScoreisalsorepresentedasanitem 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.itemScoreisalsorepresentedasanitem"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.itemStandardErrorisalsorepresentedasanitem 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.itemStandardErrorisalsorepresentedasanitem"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.itemCountErrorisalsorepresentedasanitem 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.itemCountErrorisalsorepresentedasanitem"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.code"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.version 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.version"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.name 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.name"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.item.text 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.item.text"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:QuestionnaireResponse.questionnaire.name 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "QuestionnaireResponse.questionnaire.name"^^xsd:string; 
+mms:context cdm-fhir:QuestionnaireResponse; 
+mms:context cdm-fhir:Questionnaire; 
+. 
+cdm-fhir:MedicationRequestion.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequestion.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.requester 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.requester"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:MedicationRequest.authoredOn 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.authoredOn"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.authoredOn 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.authoredOn"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dispenseRequest.validityPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dispenseRequest.validityPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dispenseRequest.validityPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dispenseRequest.validityPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dispenseRequest.quantity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dispenseRequest.quantity"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dosageInstruction.doseAndRate.dosex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dosageInstruction.doseAndRate.dosex"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dispenseRequest.expectedSupplyDuration 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dispenseRequest.expectedSupplyDuration"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dosageInstruction.timing 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dosageInstruction.timing"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.intent 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.intent"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dosageInstruction.doseAndRate.dosex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dosageInstruction.doseAndRate.dosex"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dosageInstruction.doseAndRate.dosex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dosageInstruction.doseAndRate.dosex"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationRequest.dosageInstruction.route 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationRequest.dosageInstruction.route"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:AdverseEvent.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.subject"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.date 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.date"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.recordedDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.recordedDate"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.contributor 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.contributor"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.Extension.ProposedName.uncertainity-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.Extension.ProposedName.uncertainity-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.subject"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.suspectedEntity.causality.method 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.suspectedEntity.causality.method"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.contributor 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.contributor"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.Extension.ProposedName.uncertainity-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.Extension.ProposedName.uncertainity-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:Patient.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.generalPractitioner 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.generalPractitioner"^^xsd:string; 
+mms:context cdm-fhir:Patient; 
+. 
+cdm-fhir:BodySite.patient 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "BodySite.patient"^^xsd:string; 
+mms:context cdm-fhir:BodySite; 
+. 
+cdm-fhir:Patient.gender 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.gender"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-race 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-race"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-ethnicity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-ethnicity"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.address 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.address"^^xsd:string; 
+mms:context cdm-fhir:Patient; 
+. 
+cdm-fhir:Encounter.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.location.location.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.hospitalization.admitSourceorEncounter.hospitalization.originlocation.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.hospitalization.admitSourceorEncounter.hospitalization.originlocation.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.location.location.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.partOf 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.partOf"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.source-data-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.source-data-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Location.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.name 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.name"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Condition.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.asserter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.asserter"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.clinicalStatus 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.clinicalStatus"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.onsetx 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.onsetx"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condtion.onsetx 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condtion.onsetx"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.abatementx 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.abatementx"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.abatementx 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.abatementx"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.Extension.ProposedName.raw-value.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.Extension.ProposedName.raw-value.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.Extension.ProposedName.abatement-reason.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.Extension.ProposedName.abatement-reason.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:AdverseEvent.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.subject"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.date 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.date"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.recordedDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.recordedDate"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "AdverseEvent.suspectedEntity.causality.Extension.ProposedName.cause-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:AdverseEvent; 
+. 
+cdm-fhir:Procedure.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.focalDevice-Procedure.usedReference-Procedure.usedCode 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.focalDevice-Procedure.usedReference-Procedure.usedCode"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performer.actor 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performer.actor"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Procedure.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.focalDevice-Procedure.usedReference-Procedure.usedCode 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.focalDevice-Procedure.usedReference-Procedure.usedCode"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.Extension.ProposedName.raw-value.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.Extension.ProposedName.raw-value.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.focalDevice-Procedure.usedReference 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.focalDevice-Procedure.usedReference"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:MedicationStatement.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.statusReason 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.statusReason"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dispenseRequest.numberOfRepeatsAllowed 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dispenseRequest.numberOfRepeatsAllowed"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dispenseRequest.quantity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dispenseRequest.quantity"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dispenseRequest.expectedSupplyDuration 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dispenseRequest.expectedSupplyDuration"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.medication.batch.lotNumber 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medication.batch.lotNumber"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medication; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.text 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dosageInstruction.text"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.route 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dosageInstruction.route"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.requester 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.requester"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.context 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.context"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:MedicationStatement.Extension.ProposedName.raw-value.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.Extension.ProposedName.raw-value.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.effectivePeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.effectivePeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.effectivePeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.effectivePeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.effectivePeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.effectivePeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.effectivePeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.effectivePeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.validityPeriod 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.validityPeriod"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:Location.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address.line 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address.line"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address.line 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address.line"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address.city 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address.city"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address.state 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address.state"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address.postalCode 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address.postalCode"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Location.address.country 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.address.country"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Observation.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.low 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.low"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.high 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.high"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.performerPractitioner 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.performerPractitioner"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.Extension.ProposedName.raw-value.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.Extension.ProposedName.raw-value.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.effectiveDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.effectiveDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.effectiveDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.effectiveDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.meta.source 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.meta.source"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Notsurewhythisisrequired 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Notsurewhythisisrequired"^^xsd:string; 
+mms:context cdm-fhir:None; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valueCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valueCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.Extension.ProposedName.decision-aid-alert.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.Extension.ProposedName.decision-aid-alert.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.performerPractitioner 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.performerPractitioner"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.effectiveDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.effectiveDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.effectiveDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.effectiveDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.category 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.category"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valueString 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valueString"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valueCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valueCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Procedure.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.encounter 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.encounter"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.Extension.ProposedName.source-data-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.Extension.ProposedName.source-data-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.Extension.ProposedName.num-of-procedures.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.Extension.ProposedName.num-of-procedures.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performer.actor 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performer.actor"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Practitioner.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Practitioner.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Practitioner.name 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Practitioner.name"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Practitioner.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Practitioner.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Practitioner.qualification 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Practitioner.qualification"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:PractitionerRole.specialty 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "PractitionerRole.specialty"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitionerrole; 
+. 
+cdm-fhir:PractitionerRole.location 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "PractitionerRole.location"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitionerrole; 
+. 
+cdm-fhir:Practitioner.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Practitioner.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Practitioner.gender 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Practitioner.gender"^^xsd:string; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Specimen.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.id"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.Extension.ProposedName.disease-status-code.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.Extension.ProposedName.disease-status-code.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.subject"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.type"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.Extension.ProposedName.source-data-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.Extension.ProposedName.source-data-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.collection.collectedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.collection.collectedDateTime"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.collection.collectedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.collection.collectedDateTime"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.collection.quantity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.collection.quantity"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.collection.quantity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.collection.quantity"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Specimen.bodySite 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Specimen.bodySite"^^xsd:string; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Patient.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-birthsex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-birthsex"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-ethnicity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-ethnicity"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-race 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-race"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.address 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.address"^^xsd:string; 
+mms:context cdm-fhir:Patient; 
+. 
+cdm-fhir:Patient.address.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.address.period"^^xsd:string; 
+mms:context cdm-fhir:Patient; 
+. 
+cdm-fhir:Encounter.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.subject 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.subject"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.participant.individual.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.participant.individual.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-practitioner; 
+. 
+cdm-fhir:Encounter.location.location.address 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.address"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.class 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.class"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.location.location.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.discharge-disposition.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.discharge-disposition.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounterorus-core-observationresults; 
+. 
+cdm-fhir:Observation.code-Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code-Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounterorus-core-observationresults; 
+. 
+cdm-fhir:Encounter.location.location.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.drg.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.drg.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.extension.ProposedName.drg-type.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.extension.ProposedName.drg-type.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.hospitalization.admitSourceorEncounter.hospitalization.originlocation.type 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.hospitalization.admitSourceorEncounter.hospitalization.originlocation.type"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Patient.birthDate 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.birthDate"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.deceasedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.deceasedDateTime"^^xsd:string; 
+mms:context cdm-fhir:Patient; 
+. 
+cdm-fhir:Patient.extension.us-core-birthsex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-birthsex"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-ethnicity 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-ethnicity"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.extension.us-core-race 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.extension.us-core-race"^^xsd:string; 
+mms:context cdm-fhir:us-core-patient; 
+. 
+cdm-fhir:Patient.deceasedBoolean 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Patient.deceasedBoolean"^^xsd:string; 
+mms:context cdm-fhir:Patient; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.onsetDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.onsetDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Condition.encounter.diagnosis.rank 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.encounter.diagnosis.rank"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Condition.category 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Condition.category"^^xsd:string; 
+mms:context cdm-fhir:us-core-condition; 
+. 
+cdm-fhir:Observation.interpretation 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.interpretation"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.modifierExtension 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.modifierExtension"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.high 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.high"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.low 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.low"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Location.id 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location.id"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Location 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Location"^^xsd:string; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valueCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valueCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.valuex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.valuex"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.specimen.collection.collectedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.specimen.collection.collectedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+mms:context cdm-fhir:Specimen; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Encounter.location.location.identifier 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.location.location.identifier"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+mms:context cdm-fhir:us-core-location; 
+. 
+cdm-fhir:Observation.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:Observation.referenceRange.modifierExtension 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Observation.referenceRange.modifierExtension"^^xsd:string; 
+mms:context cdm-fhir:us-core-observationresults; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.Extension.ProposedName.raw-value.CodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.Extension.ProposedName.raw-value.CodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.dosex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dosageInstruction.dosex"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.route 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dosageInstruction.route"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.authoredOn 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.authoredOn"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.requester 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.requester"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+mms:context cdm-fhir:us-core-medicationrequest; 
+. 
+cdm-fhir:MedicationStatement.medicationCodeableConcept 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.medicationCodeableConcept"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:MedicationStatement.basedOnMedicationRequest.dosageInstruction.doseAndRate.dosex 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "MedicationStatement.basedOnMedicationRequest.dosageInstruction.doseAndRate.dosex"^^xsd:string; 
+mms:context cdm-fhir:us-core-medicationstatement; 
+. 
+cdm-fhir:Procedure.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.code 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.code"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Procedure.performedDateTime 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Procedure.performedDateTime"^^xsd:string; 
+mms:context cdm-fhir:us-core-procedure; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.period 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.period"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
+cdm-fhir:Encounter.class 
+rdf:type mms:DataElement; 
+mms:context cdm-fhir:FHIR; 
+rdfs:label "Encounter.class"^^xsd:string; 
+mms:context cdm-fhir:us-core-encounter; 
+. 
