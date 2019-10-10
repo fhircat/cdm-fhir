@@ -1,6 +1,6 @@
 # cdm-fhir
-RDF Representation of CDM2FHIR Mappings
+RDF Representation of CDMH Mappings at https://build.fhir.org/ig/HL7/cdmh/profiles.html
 
-## Visual Graph
+## Visual Graph of CDM Mappings to fhir:Patient.birthDate 
 
 ![fhir:Patient.birthDate](https://raw.githubusercontent.com/fhircat/cdm-fhir/master/Patient.birthDate.png "CDM Mappings to fhir:Patient.birthDate")
