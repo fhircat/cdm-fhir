@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="BloodPressurePanel" kind="panel" base="PanelBase">
+        <key code="BloodPressurePanel_CODE"/>
+        <item type="SystolicBloodPressureMeas" id="sbp" card="1"/>
+        <item type="DiastolicBloodPressureMeas" id="dbp" card="0-1"/>
+        <item type="MeanArterialPressureMeas" id="meanArterialPressureMeas" card="0-1"/>
+        <qual type="Method" id="method" card="0-1"/>
+        <qual type="Device" id="device" card="0-1"/>
+        <qual type="BloodPressureCuffSize" id="bloodPressureCuffSize" card="0-1"/>
+        <qual type="BodyLocationPrecoord" id="bodyLocationPrecoord" card="0-1"/>
+        <qual type="BodyPosition" id="bodyPosition" card="0-1"/>
+        <qual type="SleepStatus" id="sleepStatus" card="0-1"/>
+        <qual type="AssociatedPrecondition" id="associatedPrecondition" card="0-M"/>
+        <qual type="ExerciseAssociation" id="exerciseAssociation" card="0-1"/>
+        <qual type="CardiacArrhythmiaIndicator" id="cardiacArrhythmiaIndicator" card="0-1"/>
+        <mod type="FocalSubject" id="focalSubject" card="0-1"/>
+        <constraint path="method.data.codeableConcept.valueset" value="BloodPressureMeasMethod_VSET"/>
+        <constraint path="device.data.codeableConcept.valueset" value="BloodPressureMeasDevice_VSET"/>
+        <constraint path="bodyLocationPrecoord.data.codeableConcept.valueset" value="BloodPressureMeasBodyLocationPrecoord_VSET"/>
+        <constraint path="associatedPrecondition.data.codeableConcept.valueset" value="VitalSignAssociatedPrecondition_VSET"/>
+        <constraint path="observed.participant.data.codeableConcept.code" value="Performer_CODE"/>
+        <constraint path="observed.patientLocation.card" value="0"/>
+        <constraint path="observed.providerLocation.card" value="0"/>
+        <constraint path="observed.reason.card" value="0"/>
+        <constraint path="observed.actionMethod.card" value="0"/>
+    </cem>
+    <info name="BloodPressurePanel">
+        <definition>BloodPressurePanel is an Associated CEM Panel that groups a systolic 
+            blood pressure, diastolic blood pressure, and mean arterial pressure all obtained 
+            at the same time.</definition>
+    </info>
+</ceml>

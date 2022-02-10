@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="BloodPressureCuffSize" kind="component">
+        <key code="BloodPressureCuffSize_CODE"/>
+        <data type="CodeableConcept"/>
+        <constraint path="data.codeableConcept.strength" value="CWE"/>
+        <constraint path="data.codeableConcept.valueset" value="BloodPressureCuffSize_VSET"/>
+    </cem>
+    <info name="BloodPressureCuffSize">
+        <definition>The size fo the cuff that is used for the measurement of the blood pressure.</definition>
+    </info>
+</ceml>

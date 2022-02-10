@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="DiastolicBloodPressureMeas" kind="statement" base="ClinicalObs">
+        <key code="DiastolicBloodPressure_CODE"/>
+        <data type="Quantity"/>
+        <qual type="BloodPressureCuffSize" id="bloodPressureCuffSize" card="0-1"/>
+        <qual type="BodyLocationPrecoord" id="bodyLocationPrecoord" card="0-1"/>
+        <qual type="BodyPosition" id="bodyPosition" card="0-1"/>
+        <qual type="ReferenceRange" id="referenceRange" card="0-1"/>
+        <qual type="AssociatedPrecondition" id="associatedPrecondition" card="0-M"/>
+        <constraint path="bodyLocationPrecoord.data.codeableConcept.valueset" value="BloodPressureMeasBodyLocationPrecoord_VSET"/>
+        <constraint path="interpretation.data.codeableConcept.valueset" value="AbnormalInterpretationNumericNom_VSET"/>
+        <constraint path="data.quantity.unit_code" value="MillimetersOfMercury_CODE"/>
+        <constraint path="method.data.codeableConcept.valueset" value="BloodPressureMeasMethod_VSET"/>
+        <constraint path="device.data.codeableConcept.valueset" value="BloodPressureMeasDevice_VSET"/>
+        <constraint path="associatedPrecondition.data.codeableConcept.valueset" value="VitalSignAssociatedPrecondition_VSET"/>
+        <constraint path="observed.participant.data.codeableConcept.code" value="Performer_CODE"/>
+        <constraint path="observed.patientLocation.card" value="0"/>
+        <constraint path="observed.providerLocation.card" value="0"/>
+        <constraint path="observed.reason.card" value="0"/>
+        <constraint path="observed.actionMethod.card" value="0"/>
+        <constraint path="updated.card" value="0"/>
+    </cem>
+    <info name="DiastolicBloodPressureMeas">
+        <definition>DiastolicBloodPressureMeas model is a measurement model. A measurement model holds a "question" or a "test" in the key and holds a numeric value (PQ) answer in data. For example,
+            in the HeartRateMeas model, the "question" or the "test" is "What is the heart rate measurement?", and the "answer" in data can be "100 bpm".
+            In the DiastolicBloodPressureMeas model, the question is "what is the subject's DiastolicBloodPressure?" and the numeric answer will be expressed in mmHg or millimeters of mercury.
+            
+            "DiastolicBloodPressure" by definition means "The measurement of blood pressure in the vascular system when the heart ventricles are relaxed".</definition>
+    </info>
+</ceml>

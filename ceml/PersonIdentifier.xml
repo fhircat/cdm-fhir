@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="PersonIdentifier" kind="component">
+        <key code="PersonIdentifier_CODE"/>
+        <data type="Identifier"/>
+    </cem>
+    <info name="PersonIdentifier">
+        <definition>PersonIdentifier captures the unique identification information of a person, such as the unique identification ID, which organization assigned the ID, and type of the ID.</definition>
+    </info>
+</ceml>

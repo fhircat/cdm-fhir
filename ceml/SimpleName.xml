@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="SimpleName" kind="component">
+        <key code="SimpleName_CODE"/>
+        <data type="String"/>
+    </cem>
+    <info name="SimpleName">
+        <definition>SimpleName is a component base model used to record an individual's full name without breaking it into its complex parts, using a string data type.
+            For example "John Smith".</definition>
+    </info>
+</ceml>

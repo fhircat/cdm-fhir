@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="CardiacArrhythmiaIndicator" kind="component">
+        <key code="CardiacArrhythmiaIndicator_CODE"/>
+        <data type="CodeableConcept"/>
+        <constraint path="data.codeableConcept.valueset" value="PresentAbsent_VSET"/>
+        <constraint path="data.codeableConcept.strength" value="CWE"/>
+    </cem>
+    <info name="CardiacArrhythmiaIndicator">
+        <definition>CardiacArrhythmiaIndicator is a qualifier CEM used to indicate that a cardiac arrhythmia is present or absent which could affect the measurement of a heart rate or blood pressure.</definition>
+        <author>nrdavis1</author>
+        <date>26 Apr 2021 07:55</date>
+        <requested_by>Graphite</requested_by>
+        <status>draft</status>
+    </info>
+</ceml>

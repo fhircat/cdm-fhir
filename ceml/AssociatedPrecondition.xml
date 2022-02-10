@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ceml>
+    <!--© 2018 IHC Health Services, Inc. All Rights Reserved. This document is machine generated.-->
+    <cem name="AssociatedPrecondition" kind="component">
+        <key code="AssociatedPrecondition_CODE"/>
+        <data type="CodeableConcept"/>
+        <constraint path="data.codeableConcept.strength" value="CWE"/>
+        <constraint path="data.codeableConcept.valueset" value="AssociatedPrecondition_VSET"/>
+    </cem>
+    <info name="AssociatedPrecondition">
+        <definition>AssociatedPrecondition describes the previously existing conditions or states that could effect a measurement or assesment.
+            For example; a patients weight taken while clothed, a patients height with or without shoes, a patients blood pressure taken while standing or lying down.</definition>
+    </info>
+</ceml>
